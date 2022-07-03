@@ -12,6 +12,8 @@ hello.style.width = `${window.innerWidth}px`;
 
 // starsContainer.style.backgroundColor = "red";
 const arryNum = [];
+const randomNums = [];
+const cleanNums = [];
 
 const nums = 500;
 
@@ -37,8 +39,7 @@ createStars();
 
 function stars(){
     const num =nums;
-    const randomNums = [];
-    const cleanNums = [];
+    
     
     //math random to select the number and put it an array
     for (let i = 0; i < 20; i++) {
