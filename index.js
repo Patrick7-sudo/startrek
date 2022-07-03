@@ -12,8 +12,7 @@ hello.style.width = `${window.innerWidth}px`;
 
 // starsContainer.style.backgroundColor = "red";
 const arryNum = [];
-const randomNums = [];
-const cleanNums = [];
+
 const nums = 500;
 
 function createStars() {
@@ -38,6 +37,8 @@ createStars();
 
 function stars(){
     const num =nums;
+    const randomNums = [];
+    const cleanNums = [];
     
     //math random to select the number and put it an array
     for (let i = 0; i < 20; i++) {
@@ -59,16 +60,19 @@ function stars(){
           const meh = Number(starsBlinking[i].id);
            if(cleanNums.includes(meh)===true){
                starsBlinking[i].classList.add("blinking");
-           }  
+           }  else{
+               starsBlinking[i].classList.remove("blinking");
+           }
       }
     }
 
     blinkingStars();
+    console.log(cleanNums);
 }
 
 stars()
 
-setInterval(stars,6000)
+setInterval(stars,10000)
 
 
 
